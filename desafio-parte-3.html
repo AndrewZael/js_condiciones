@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condiciones</title>
+    <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+    <main>
+        <h1>Ingrese Password</h1>
+        <form>
+            <select id="firstNumber">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+            </select>
+            <select id="secondNumber">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+            </select>
+            <select id="thirdNumber">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+            </select>
+            <br><br>
+            <button type="button" onclick="verify()">Ingresar</button>
+            <p id="message"></p>
+        </form>
+    </main>
+
+    <script>
+       function verify(){
+         const firstNumber = Number(document.getElementById('firstNumber').value);
+         const secondNumber = Number(document.getElementById('secondNumber').value);
+         const thirdNumber = Number(document.getElementById('thirdNumber').value);
+         const message = document.getElementById('message'); 
+
+         if(firstNumber == 9 && secondNumber == 1 && thirdNumber == 1){
+            message.innerHTML = 'Password <strong>1</strong> correcto';
+         }else if(firstNumber == 7 && secondNumber == 1 && thirdNumber == 4){
+            message.innerHTML = 'Password <strong>2</strong> correcto';
+         }else{
+            message.innerHTML = 'Password incorrecto';
+         }
+
+       }
+    </script>
+
+</body>
+</html>

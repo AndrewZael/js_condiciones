@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condiciones</title>
+    <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+    <main>
+        <form class="form-stickers">
+            <ul class="list-stickers">
+                <li>
+                    <img src="assets/img/html5.png" alt="HTML5" /><br>
+                    <label>
+                        <small>Cantidad stickers <strong>HTML5</strong></small>
+                        <input id="htmlInput" type="number" placeholder="Ej: 10" />
+                    </label>
+                </li>
+                <li>
+                    <img src="assets/img/css3.png" alt="CSS3" height="225" /><br>
+                    <label>
+                        <small>Cantidad stickers <strong>CSS3</strong></small>
+                        <input id="cssInput" type="number" placeholder="Ej: 10" />
+                    </label>
+                </li>
+                <li>
+                    <img src="assets/img/js.png" alt="Javascript" /><br>
+                    <label>
+                        <small>Cantidad stickers <strong>Javascript</strong></small>
+                        <input id="jsInput" type="number" placeholder="Ej: 10" />
+                    </label>
+                </li>
+            </ul>
+
+            <p id="message"></p>
+
+            <button type="button" onclick="verify()">Verificar</button>
+
+        </form>
+    </main>
+
+    <script>
+        function verify(){
+            const htmlInput = document.getElementById('htmlInput');
+            const cssInput = document.getElementById('cssInput');
+            const jsInput = document.getElementById('jsInput');
+            const messageElem = document.getElementById('message');
+
+            var htmlCount = Number(htmlInput.value);
+            var cssCount  = Number(cssInput.value);
+            var jsCount = Number(jsInput.value);
+
+            var sum = htmlCount + cssCount + jsCount;
+
+            if(sum <= 10){
+                messageElem.innerHTML = 'Llevas <strong>' + sum + '</strong> stickers'
+            }else{
+                messageElem.innerHTML = 'Llevas demasiados stickers';
+            }
+        }
+    </script>
+
+</body>
+</html>

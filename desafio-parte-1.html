@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condiciones</title>
+    <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+    <main>
+        <h1>Garou Mark of the Wolves</h1>
+        <img src="assets/img/garou.jpg" alt="Garou Mark of the Wolves" width="100%" onclick="redBorder()" class="border-img" />
+    </main>
+
+    <script>
+        var countClick = 0;
+        function redBorder(){
+            const img = document.querySelector('img');
+            if(countClick == 0){
+                img.style.borderColor = 'red';
+                countClick++;
+            }else{
+                img.style.removeProperty('border-color');
+                countClick--;
+            }
+        }
+    </script>
+
+</body>
+</html>
