@@ -9,7 +9,7 @@ main{
     width: 960px;
     margin: 0 auto;
 }
-form, h1{
+main,form, h1{
     text-align: center;
 }
 select{
